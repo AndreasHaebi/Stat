@@ -7,8 +7,9 @@
 from pandas import DataFrame, Series
 import pandas as pd
 
-fuel = pd.read_table(r"D:\Git\Stat\W1\d.fuel.dat", sep=",", index_col=0)
+fuel = pd.read_table(r"C:\Users\Andreas\Documents\Projekte\Stat\Andreas\W1\d.fuel.dat", sep=",", index_col=0)
 fuel
+sortedFuel = fuel.sort_values(by="weight", ascending="true")
 
 # ---------------------------------------
 # b) Wählen Sie nur die fünfte Zeile des Dataframe d.fuel aus. Welche Werte stehen in der fünften Zeile? 
@@ -31,12 +32,14 @@ fuel.head()
 # -----------------------------------------
 
 fuel["mpg"].mean()
+fuel.loc[7:22,"mpg"].mean()
 
 # ---------------------------------------
 # e) Berechnen Sie den Mittelwert der Reichweite der Autos 7 bis 22.
 # -----------------------------------------
 
 fuel.loc[7:22,:].mean()
+fuel.loc[7:22,"mpg"].mean()
 
 # ---------------------------------------
 # f) Erzeugen Sie einen neuen Vektor t_kml, der alle Reichweiten in km/l, und

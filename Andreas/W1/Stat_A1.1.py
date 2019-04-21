@@ -3,7 +3,7 @@ import pandas as pd
 # ---------------------------------------
 # Aufgabe 1.1 a (Einlesen der Datei)
 # -----------------------------------------
-data = pd.read_csv(r"D:\Git\Stat\W1\child.csv", sep=",", index_col=0)
+data = pd.read_csv(r"C:\Users\Andreas\Documents\Projekte\Stat\Andreas\W1\child.csv", sep=",", index_col=0)
 
 data.head()
 # Mit data.head werden die ersten 5 Zeilen ausgegeben. Damit kann geprüft werden ob die Datei korrekt eingelesen wurde.

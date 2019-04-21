@@ -7,18 +7,18 @@ import numpy as np
 # a) Zeichnen Sie Histogramme von der Zeitspanne zwischen zwei Ausbrüchen.
 # Lesen Sie zuerst die Datei ein
 # -----------------------------------------
-geysir = pd.read_table(r"D:\Git\Stat\W1\geysir.dat", sep=" ", index_col=0)
+geysir = pd.read_table(r"C:\Users\Andreas\Documents\Projekte\Stat\Andreas\W1\geysir.dat", sep=" ", index_col=0)
 geysir.head()
 
-plt.subplot(221)
+plt.subplot(131)
 geysir["Zeitspanne"].plot(kind="hist", edgecolor="black")
 plt.xlabel("10 Klassen")
 
-plt.subplot(222)
+plt.subplot(132)
 geysir["Zeitspanne"].plot(kind="hist", bins=20, edgecolor="black")
 plt.xlabel("20 Klassen")
 
-plt.subplot(223)
+plt.subplot(133)
 geysir["Zeitspanne"].plot(kind="hist", bins=np.arange(41,107,11), edgecolor="black")
 plt.xlabel("Klassengrenzen 41, 52 , 63, 74 , 85, 96")
 

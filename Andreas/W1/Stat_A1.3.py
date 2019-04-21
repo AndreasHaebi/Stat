@@ -20,7 +20,9 @@ mean_x = x.sum() / x.size
 mean_x
 n = x.size
 var_x = 1/(n-1) * ((x-mean_x)**2).sum()
-var_x
+standardabweichung = var_x**0.5
+standardabweichung = np.sqrt(var_x)
+standardabweichung
 
 # ---------------------------------------
 # Aufgabe 1.3
@@ -43,6 +45,7 @@ x_sorted[k]
 x.mean()
 x.std()
 x.median()
+x.quantile(q=.75, interpolation="lower")
 
 # ---------------------------------------
 # Aufgabe 1.3
