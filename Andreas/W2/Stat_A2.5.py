@@ -7,12 +7,11 @@ import matplotlib.pyplot as plt
 #  in welchen das Einkommen versus Anzahl Jahre Schulbildung und Einkommen versus 
 #  Intelligenzquotient aufgetragen sind.
 
-income = pd.read_table(r"D:\Git\Stat\W2\income.dat", sep=" ")
+income = pd.read_table(r"C:\Users\Andreas\Documents\Projekte\Stat\Andreas\W2\income.dat", sep=" ")
 income.head()
 
 # Einkommen versus Anzahl Jahre Schulbildung
 income.plot(kind="scatter",x= "Educ", y="Income2005")
-# plt.show()
 
 b, a = np.polyfit(income["Educ"], income["Income2005"], deg=1)
 x = np.linspace(income["Educ"].min(), income["Educ"].max())
@@ -20,7 +19,7 @@ x = np.linspace(income["Educ"].min(), income["Educ"].max())
 plt.plot(x, a+b*x, c="orange")
 plt.show()
 
-# inkommen versus Intelligenzquotient
+# Einkommen versus Intelligenzquotient
 income.plot(kind="scatter",x= "AFQT", y="Income2005")
 # plt.show()
 b, a = np.polyfit(income["AFQT"], income["Income2005"], deg=1)
@@ -33,6 +32,7 @@ plt.show()
 # die Regressionsgerade wie im Skript
 
 # Print siehe a)
+b, a = np.polyfit(income["Educ"], income["Income2005"], deg=1)
 print (a, b)
 
 # Wir finden also die Werte a = −40′200 und b = 6451 für den Fall von Einkommen gegen Anzahl Jahre Schulbildung ( und a = 21′182 und b = 518.68 für

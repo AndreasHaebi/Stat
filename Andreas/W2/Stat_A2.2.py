@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-schlamm = pd.read_table(r"D:\Git\Stat\W2\klaerschlamm.dat", sep=" ", index_col=0)
+schlamm = pd.read_table(r"C:\Users\Andreas\Documents\Projekte\Stat\Andreas\W2\klaerschlamm.dat", sep=" ", index_col=0)
 schlamm = schlamm.drop("Labor", 1)
 
 # a) Erstellen Sie für jede Probe einen Boxplot, und berechnen Sie jeweils das arithmetische Mittel und den Median. Bei welchen Proben gibt es Ausreisser, und
